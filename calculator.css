@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    display: flex;
+}
+.calcuator {
+    position: relative;
+    border-radius: 20px;
+    padding: 45px;
+    width: 400px;
+    box-shadow: 20px 20px 20px #000,
+    -20px -20px 20px #fff;
+    text-transform: capitalize;
+}
+.calcuator .button {
+    position: relative;
+    display: grid;
+}
+.calcuator .button #value {
+    position: relative;
+    grid-column: span 4;
+    user-select: none;
+    overflow: none;
+    text-align: end;
+    height: 100px;
+    width: 100%;
+    color: #EB1D36;
+    line-height: 80px;
+    box-shadow: inset 6px 6px 10px #000,
+    inset -6px -6px 30px #fff;
+    margin-bottom: 24px;
+    font-weight: 700;
+    padding: 0 20px;
+    border-radius: 10px; 
+}
+.calcuator .button span {
+    position: relative;
+    padding: 10px;
+    box-shadow: 6px 6px 10px #000,
+    -6px -6px 30px #fff;
+    user-select: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    min-width: 40px;
+    display: flex;
+    /* color: #22df; */
+    font-weight: 500px;    
+}
+
+.calcuator .button span:active {
+    box-shadow: inset 5px 5px 10px #000,
+    inset -5px -5px 30px #fff;
+    color: #ffaa00;
+}
+.calcuator .button span#clear {
+    grid-column: span 2;
+    background: #ffaa00;
+    color: #fff;
+    border: solid 2px #fff;
+}
+.calcuator .button span#plus {
+    grid-row: span 2;
+    background: #1C6758;
+    color: #fff;
+    border: solid 2px #fff;
+}
+.calcuator .button span#equal {
+    grid-row: span 2;
+    background: #224B0C;
+    color: #fff;
+    border: solid 2px #fff;
+}
+.calcuator .button span#equal,
+.calcuator .button span#plus,
+.calcuator .button span#clear {
+    box-shadow: 5px 5px 20px #000,
+    -5px -5px 30px #fff;
+} 
+.clickChange {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    top: 20px;
+    right: 15px;
+    border: solid 2px #eee;
+    border-radius: 50%;
+    box-shadow: 5px 5px 50px #000,
+    -5px -5px 10px #fff;
+}
+.dark {
+    background: #000;
+}
+.dark .calcuator {
+    background-color: #33393e;
+    box-shadow:  5px 5px 10px #000,
+     -5px -5px 30px #33393e;
+    display: grid;
+}
+.dark .calcuator .button #value {
+    background: #33393e;
+    color: #eee;
+    box-shadow: inset 6px 6px 10px #000,
+    inset -6px -6px 30px #33393e;
+}
+.dark .calcuator .button span {
+    color: #eee;
+    border: solid 2px #333;
+    box-shadow:  5px 5px 10px #000,
+     -5px -5px 30px #33393e;
+}
+.dark .calcuator .button span:active {
+    box-shadow:  5px 5px 10px #000,
+     -5px -5px 30px #eee;
+}
+.calcuator .button span#equal,
+.calcuator .button span#plus,
+.calcuator .button span#clear {
+    border: solid 2px #33393e;
+}
+.calcuator .button span#equal:active,
+.calcuator .button span#plus:active,
+.calcuator .button span#clear:active {
+    box-shadow:  5px 5px 10px #000,
+    -5px -5px 30px #eee3,
+    inset -5px -5px 30px #333e33,
+}
+.dark .calcuator .button span#equal:active,
+.dark .calcuator .button span#plus:active,
+.dark .calcuator .button span#clear:active {
+    box-shadow:  5px 5px 10px #000,
+    -5px -5px 30px #333e33,
+    inset -5px -5px 20px #33393e
+}
+.dark .clickChange {
+    background: #fff;
+}
